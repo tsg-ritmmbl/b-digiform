@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+  <head> 
+    <title> MBL/ATML BORROWER'S DIGIFORM </title> 
+    <style>
+        h1{
+          font-size: 20;
+          font-weight: bold;
+          font-family: Arial;
+          color: rgb(0,40,122);
+          text-align: center;
+          border-radius: 8px;
+          background-color: #000;
+          text-shadow: 5px 2px 5px white;
+          color: rgb(0,0,0);
+          padding: 5px;
+          background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );          
+        }
+        label{
+            display: inline-block;
+            float: left;
+            clear: left;
+            width: 650px;
+            text-align: right;
+        }
+        input {
+          display: inline-block;
+          float: left;
+        }    
+
+        .button {
+            position: relative;
+            width: 120px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            border: none;
+            padding: 12px;
+            gap: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: auto;
+        }
+          
+        .button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            left: -4px;
+            top: -1px;
+            margin: auto;
+            width: 128px;
+            height: 48px;
+            border-radius: 10px;
+            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+            z-index: -10;
+            pointer-events: none;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+        .button::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+            transform: translate3d(0, 0, 0) scale(0.95);
+            filter: blur(20px);
+        }
+          
+        .button:hover::after {
+            filter: blur(30px);
+        }
+          
+        .button:hover::before {
+            transform: rotate(-180deg);
+        }
+          
+        .button:active::before {
+            scale: 0.7;
+        }
+        
+
+    </style>
+  </head>
+  <body> 
+    
+
+    <div style="text-align:center">
+      <img id='logo' src="static/AMTL.jpg">
+    </div>
+    <h1> MBL/ATML BORROWER'S DIGIFORM </h1> 
+
+    <form method="POST">
+        <div>
+            <label>Personnel First Name: </label><input type="text", name="FirstName" />
+            <br><br>
+            <label>Personnel Middle Name: </label><input type="text", name="MiddleName" />
+            <br><br>
+            <label>Personnel Last Name: </label><input type="text", name="LastName" />
+            <br><br>
+            <label>Department: </label><input type="text", name="Department" />
+            <br><br>
+            <label>Borrowed Equipment: </label><input type="text", name="Equipment" />
+            <br><br>
+            <label>Date: </label><input type="date", name="Date" />
+            <br><br>
+            <label>Time Started: </label><input type="time", name="Time" />
+            <br><br>
+            <label>Duration: </label><input type="text", name="Duration" />
+            <br><br>
+            <label>Informed MBL Personnel: </label><input type="text", name="IMP" />
+            <br><br>
+            <label>Other Remarks: </label><input type="text", name="Remarks" />
+            <br><br>
+        </div>
+        <br>
+        <button class="button">SUBMIT</button>
+
+    </form>
+
+<br> <br>
+
+
+
+  </body>
+
+
+  <footer class="bg-light text-center text-lg-start" style="text-align:center;">
+    <!-- Copyright -->
+    <div style="background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% ); text-shadow: 2px 2px 2px white;">
+      © 2023 Copyright:TSG
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html> 
