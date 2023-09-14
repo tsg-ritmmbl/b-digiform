@@ -1,4 +1,0 @@
-mysql_host: 'localhost'
-mysql_user: 'timmydb'
-mysql_password: 'timmy12345'
-mysql_db: 'timmy_db'
